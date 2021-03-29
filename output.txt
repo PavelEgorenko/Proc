@@ -1,5 +1,5 @@
 Filled container.
-Container contains 6 elements.
+Container contains 7 elements.
 1: Diagonal two-dimensional array:
 Size = 3
 1 0 0 
@@ -13,18 +13,23 @@ Size = 2
 Size = 2
 76 3 
 1 7
-4: Diagonal two-dimensional array:
+4: Triangle two-dimensional array:
+Size = 3
+1 0 0 
+2 5 0 
+3 8 5
+5: Diagonal two-dimensional array:
 Size = 4
 3 0 0 0 
 0 2 0 0 
 0 0 4 0 
 0 0 0 5
-5: Diagonal two-dimensional array:
+6: Diagonal two-dimensional array:
 Size = 3
 11 0 0 
 0 12 0 
 0 0 13
-6: Common two-dimensional array:
+7: Common two-dimensional array:
 Size = 2
 10 20 
 30 40
