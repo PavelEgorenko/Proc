@@ -2,7 +2,8 @@ from matrices import InMtx
 from matrices import OutMtx
 from diagonal_matrix import OutDiag
 from binary_matix import OutBin
-
+class container():
+    matrices = []
 
 def InData(matrices, file):
     for line in file:
