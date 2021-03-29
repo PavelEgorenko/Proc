@@ -12,6 +12,7 @@ def InMtx(matrices, line):
         nm = bin_matrix()
         InBin(nm, matrices, line)
 
+
 def OutMtx(struct, ofst):
     if struct.type == "Diag":
         OutDiag(struct, ofst)
