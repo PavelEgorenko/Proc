@@ -1,12 +1,15 @@
 class diagonal_matrix:
+    OutputType = ["None", "line by line", "one dimensional array"]
     type = "Diag"
     size = 0
     mtx = ""
+    key = 1
 
 
 def InDiag(nm, matrices, line):
     mtx1 = line.split(" ")
     nm.size = len(mtx1)
+    nm.key = mtx1.pop(0)
 
     for i in mtx1:
         mtx2 = ""
@@ -21,5 +24,8 @@ def InDiag(nm, matrices, line):
 
 def OutDiag(struct, ofst):
     ofst.write("Diagonal two-dimensional array:\n")
+    if struct.key == "2":
+        struct.mtx = struct.mtx.replace("\n", "")
+    ofst.write("Output Type = " + struct.OutputType[int(struct.key)] + "\n")
     ofst.write("Size = " + str(struct.size) + "\n")
     ofst.write(struct.mtx + "\n")
