@@ -11,10 +11,11 @@ def InData(matrices, file):
 
 
 def OutData(matrices, ofst):
-    ofst.write("Container contains " + str(len(matrices)) + " elements.\n")
+    ofst.write("Container contains " + str(len(matrices)) + " elements.\n\n")
     for i in range(len(matrices)):
         ofst.write(str(i + 1) + ": ")
         OutMtx(matrices[i], ofst)
+        ofst.write("\n")
 
 def OutDataFiltr(matrices, ofst):
     ofst.write("Container contains " + str(len(matrices)) + " elements.\n")
@@ -22,6 +23,7 @@ def OutDataFiltr(matrices, ofst):
         if matrices[i].type == "Bin":
             ofst.write(str(i + 1) + ": ")
             OutMtx(matrices[i], ofst)
+            ofst.write("\n")
 
 def Sort(matrices):
     for i in range(len(matrices)-1):
