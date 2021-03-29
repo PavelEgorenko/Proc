@@ -18,6 +18,7 @@ def InMtx(matrices, line):
         InTri(nm, matrices, line)
 
 
+
 def OutMtx(struct, ofst):
     if struct.type == "Diag":
         OutDiag(struct, ofst)
