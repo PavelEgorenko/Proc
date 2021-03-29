@@ -16,6 +16,12 @@ def OutData(matrices, ofst):
         ofst.write(str(i + 1) + ": ")
         OutMtx(matrices[i], ofst)
 
+def OutDataFiltr(matrices, ofst):
+    ofst.write("Container contains " + str(len(matrices)) + " elements.\n")
+    for i in range(len(matrices)):
+        if matrices[i].type == "Bin":
+            ofst.write(str(i + 1) + ": ")
+            OutMtx(matrices[i], ofst)
 
 def Clear(matrices):
     matrices.clear()
