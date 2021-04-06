@@ -2,8 +2,11 @@ from matrices import InMtx
 from matrices import OutMtx
 from diagonal_matrix import OutDiag
 from binary_matix import OutBin
-class container:
+
+
+class container():
     matrices = []
+
 
 def InData(matrices, file):
     for line in file:
@@ -28,8 +31,9 @@ def OutDataFiltr(matrices, ofst):
 def Sort(matrices):
     for i in range(len(matrices)-1):
         for k in range(len(matrices)-1):
-            if matrices[k].size > matrices[k+1].size:
+            if matrices[k].key > matrices[k+1].key:
                 matrices[k], matrices[k+1] = matrices[k+1], matrices[k]
+
 
 def Clear(matrices):
     matrices.clear()
