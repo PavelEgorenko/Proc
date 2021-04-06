@@ -2,7 +2,7 @@ from matrices import InMtx
 from matrices import OutMtx
 from diagonal_matrix import OutDiag
 from binary_matix import OutBin
-class container():
+class container:
     matrices = []
 
 def InData(matrices, file):
@@ -16,6 +16,11 @@ def OutData(matrices, ofst):
         ofst.write(str(i + 1) + ": ")
         OutMtx(matrices[i], ofst)
 
+def Sort(matrices):
+    for i in range(len(matrices)-1):
+        for k in range(len(matrices)-1):
+            if matrices[k].size > matrices[k+1].size:
+                matrices[k], matrices[k+1] = matrices[k+1], matrices[k]
 
 def Clear(matrices):
     matrices.clear()
