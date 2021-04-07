@@ -1,0 +1,14 @@
+Container contains 2 elements.
+
+1: Diagonal two-dimensional array:
+Output Type = line by line
+Size = 1
+Sum of elements = 1
+1
+
+2: Triangle two-dimensional array:
+Output Type = one dimensional array
+Size = 1
+Sum of elements = 2
+2
+

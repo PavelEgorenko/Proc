@@ -1,0 +1,5 @@
+Common two-dimensional array:
+Output Type = line by line
+Size = 2
+Sum of elements = 57
+233
