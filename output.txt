@@ -3,11 +3,12 @@ Container contains 7 elements.
 
 1: Diagonal two-dimensional array:
 Output Type = line by line
-Size = 4
-Sum of elements = 6
-1 0 0 
-0 2 0 
-0 0 3
+Size = 5
+Sum of elements = 9
+1 0 0 1 
+0 2 0 0 
+0 0 3 0 
+1 0 0 1
 
 2: Triangle two-dimensional array:
 Output Type = line by line

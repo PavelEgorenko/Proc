@@ -9,7 +9,14 @@ class triangle_matrix:
 
 def InTri(nm, matrices, line):
     mtx1 = line.split(" ")
+    for i in mtx1:
+        if not i.isdigit():
+            print("В матрице содержаться не только числа, ошибка в", len(matrices) + 1, "строке")
+            exit()
     nm.key = mtx1.pop(0)
+    if nm.key != "1" and nm.key != "2":
+        print("Неверно введен тип вывода данных в треугольной матрице, ошибка в", len(matrices) + 1, "строке")
+        exit()
     itr = 0
     length = 0
     while length < len(mtx1):
@@ -17,6 +24,9 @@ def InTri(nm, matrices, line):
         length = 0
         for i in range(itr):
             length += i + 1
+        if length > len(mtx1):
+            print("Неверно введено количество элементов в треугольной матрице, ошибка в", len(matrices) + 1, "строке")
+            exit()
     nm.size = itr
 
     for i in range(nm.size):

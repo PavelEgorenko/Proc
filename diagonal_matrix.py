@@ -9,8 +9,15 @@ class diagonal_matrix:
 
 def InDiag(nm, matrices, line):
     mtx1 = line.split(" ")
+    for i in mtx1:
+        if not i.isdigit():
+            print("В диагональной матрице содержаться не только числа, ошибка в", len(matrices) + 1, "строке")
+            exit()
     nm.size = len(mtx1)
     nm.key = mtx1.pop(0)
+    if nm.key != "1" and nm.key != "2":
+        print("Неверно введен тип вывода данных в диагональной матрице, ошибка в", len(matrices) + 1, "строке")
+        exit()
 
     for i in mtx1:
         mtx2 = ""

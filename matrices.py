@@ -16,6 +16,9 @@ def InMtx(matrices, line):
         line = line[2:]
         nm = triangle_matrix()
         InTri(nm, matrices, line)
+    else:
+        print("Некорректный ввод типа матрицы, ошибка в", len(matrices) + 1, "строке")
+        exit()
 
 
 def OutMtx(struct, ofst):

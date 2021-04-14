@@ -9,9 +9,19 @@ class bin_matrix:
 
 def InBin(nm, matrices, line):
     mtx1 = line.split(" ")
+    for i in mtx1:
+        if not i.isdigit():
+            print("В матрице содержаться не только числа, ошибка в", len(matrices) + 1, "строке")
+            exit()
     countlines = int(len(mtx1) ** 0.5)
     nm.size = countlines
     nm.key = mtx1.pop(0)
+    if len(mtx1) ** 0.5 != nm.size:
+        print("Неверно введено количество элементов в матрице, ошибка в", len(matrices) + 1, "строке")
+        exit()
+    if nm.key != "1" and nm.key != "2":
+        print("Неверно введен тип вывода данных в обычной матрице матрице, ошибка в", len(matrices) + 1, "строке")
+        exit()
 
     for i in range(0, len(mtx1), countlines):
         mtx2 = ""
