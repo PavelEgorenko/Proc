@@ -1,6 +1,9 @@
 from container import *
 
-ifst = open("input.txt").read().split("\n")
+try:
+    ifst = open("input.txt").read().split("\n")
+except:
+    exit()
 ofst = open("output.txt", "w")
 ofst_filtr = open("output1.txt", "w")
 

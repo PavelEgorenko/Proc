@@ -1,7 +1,6 @@
 from matrices import InMtx
 from matrices import OutMtx
-from diagonal_matrix import OutDiag
-from binary_matix import OutBin
+from diagonal_matrix import sum_of_elements
 
 
 class container():
@@ -20,6 +19,7 @@ def OutData(matrices, ofst):
         OutMtx(matrices[i], ofst)
         ofst.write("\n")
 
+
 def OutDataFiltr(matrices, ofst):
     ofst.write("Container contains " + str(len(matrices)) + " elements.\n")
     for i in range(len(matrices)):
@@ -28,11 +28,12 @@ def OutDataFiltr(matrices, ofst):
             OutMtx(matrices[i], ofst)
             ofst.write("\n")
 
+
 def Sort(matrices):
-    for i in range(len(matrices)-1):
-        for k in range(len(matrices)-1):
-            if matrices[k].key > matrices[k+1].key:
-                matrices[k], matrices[k+1] = matrices[k+1], matrices[k]
+    for i in range(len(matrices) - 1):
+        for k in range(len(matrices) - 1):
+            if sum_of_elements(matrices[k]) > sum_of_elements(matrices[k + 1]):
+                matrices[k], matrices[k + 1] = matrices[k + 1], matrices[k]
 
 
 def Clear(matrices):

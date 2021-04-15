@@ -1,12 +1,5 @@
 Container contains 7 elements.
-4: Common two-dimensional array:
-Output Type = line by line
-Size = 2
-Sum of elements = 100
-10 20 
-30 40
-
-5: Common two-dimensional array:
+2: Common two-dimensional array:
 Output Type = one dimensional array
 Size = 2
 Sum of elements = 12
@@ -17,4 +10,11 @@ Output Type = one dimensional array
 Size = 2
 Sum of elements = 87
 76 3 1 7
+
+7: Common two-dimensional array:
+Output Type = line by line
+Size = 2
+Sum of elements = 100
+10 20 
+30 40
 

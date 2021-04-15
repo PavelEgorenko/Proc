@@ -31,8 +31,7 @@ class Test_triangle_matrix(TestCase):
     def test_sum_elements(self):
         nm = triangle_matrix()
         nm.mtx = "23 0 \n111 13"
-        sum_of_elements(nm)
-        self.assertEqual(nm.sumelems, 147)
+        self.assertEqual(sum_of_elements(nm), 147)
 
 
 class Test_binar_matrix(TestCase):
@@ -60,8 +59,7 @@ class Test_binar_matrix(TestCase):
     def test_sum_elements(self):
         nm = triangle_matrix()
         nm.mtx = "23 2 \n111 13"
-        sum_of_elements(nm)
-        self.assertEqual(nm.sumelems, 149)
+        self.assertEqual(sum_of_elements(nm), 149)
 
 
 class Test_diag_matrix(TestCase):
@@ -78,7 +76,6 @@ class Test_diag_matrix(TestCase):
         nm.mtx = "233"
         nm.size = 2
         nm.key = 1
-        nm.sumelems = 57
         ofsttest = open("testdiagout.txt").read()
         ofst = open("tests.txt", "w")
         OutDiag(nm, ofst)
@@ -89,8 +86,7 @@ class Test_diag_matrix(TestCase):
     def test_sum_elements(self):
         nm = diagonal_matrix()
         nm.mtx = "23 0 \n0 13"
-        sum_of_elements(nm)
-        self.assertEqual(nm.sumelems, 36)
+        self.assertEqual(sum_of_elements(nm), 36)
 
 
 class Test_matrices(TestCase):
@@ -188,13 +184,13 @@ class Test_container(TestCase):
         c = []
         ctest = container
         nm1 = bin_matrix()
-        nm1.key = 1
+        nm1.mtx = "1"
         nm2 = triangle_matrix()
-        nm2.key = 2
+        nm2.mtx = "2"
         nm3 = triangle_matrix()
-        nm3.key = 1
+        nm3.mtx = "1"
         nm4 = bin_matrix()
-        nm4.key = 1
+        nm4.mtx = "1"
         c.append(nm1)
         c.append(nm2)
         c.append(nm3)

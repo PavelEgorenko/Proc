@@ -10,13 +10,11 @@ Sum of elements = 9
 0 0 3 0 
 1 0 0 1
 
-2: Triangle two-dimensional array:
-Output Type = line by line
-Size = 3
-Sum of elements = 24
-1 0 0 
-2 5 0 
-3 8 5
+2: Common two-dimensional array:
+Output Type = one dimensional array
+Size = 2
+Sum of elements = 12
+1 3 5 3
 
 3: Diagonal two-dimensional array:
 Output Type = line by line
@@ -27,18 +25,19 @@ Sum of elements = 14
 0 0 4 0 
 0 0 0 5
 
-4: Common two-dimensional array:
+4: Triangle two-dimensional array:
 Output Type = line by line
-Size = 2
-Sum of elements = 100
-10 20 
-30 40
+Size = 3
+Sum of elements = 24
+1 0 0 
+2 5 0 
+3 8 5
 
-5: Common two-dimensional array:
+5: Diagonal two-dimensional array:
 Output Type = one dimensional array
-Size = 2
-Sum of elements = 12
-1 3 5 3
+Size = 4
+Sum of elements = 36
+11 0 0 0 12 0 0 0 13
 
 6: Common two-dimensional array:
 Output Type = one dimensional array
@@ -46,11 +45,12 @@ Size = 2
 Sum of elements = 87
 76 3 1 7
 
-7: Diagonal two-dimensional array:
-Output Type = one dimensional array
-Size = 4
-Sum of elements = 36
-11 0 0 0 12 0 0 0 13
+7: Common two-dimensional array:
+Output Type = line by line
+Size = 2
+Sum of elements = 100
+10 20 
+30 40
 
 Empty container.
 Container contains 0 elements.

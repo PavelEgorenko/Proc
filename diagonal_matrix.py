@@ -3,7 +3,6 @@ class diagonal_matrix:
     type = "Diag"
     size = 0
     mtx = ""
-    sumelems = 0
     key = 1
 
 
@@ -28,7 +27,6 @@ def InDiag(nm, matrices, line):
                 mtx2 += ("0" + " ")
         nm.mtx += mtx2 + "\n"
     nm.mtx = nm.mtx[:-2]
-    sum_of_elements(nm)
     matrices.append(nm)
 
 
@@ -38,11 +36,13 @@ def OutDiag(struct, ofst):
         struct.mtx = struct.mtx.replace("\n", "")
     ofst.write("Output Type = " + struct.OutputType[int(struct.key)] + "\n")
     ofst.write("Size = " + str(struct.size) + "\n")
-    ofst.write("Sum of elements = " + str(struct.sumelems) + "\n")
+    ofst.write("Sum of elements = " + str(sum_of_elements(struct)) + "\n")
     ofst.write(struct.mtx + "\n")
 
 
 def sum_of_elements(nm):
     lst = nm.mtx.replace("\n", "").split(" ")
+    sumelems = 0
     for i in lst:
-        nm.sumelems += int(i)
+        sumelems += int(i)
+    return sumelems
